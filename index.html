@@ -10,6 +10,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
 
         <!-- Styles -->
         <style>
@@ -43,6 +45,15 @@
             .title {
                 font-size: 36px;
                 padding: 20px;
+                color: #0f7ae5;
+                font-weight: 600;
+            }
+            .link a {
+                text-transform: initial;
+                font-weight: 600;
+            }
+            .link a:hover{
+                text-decoration: none;
             }
         </style>
     </head>
@@ -52,7 +63,56 @@
                 <div class="title">
                     GibranDev
                 </div>
+                <div class="link">
+                    <a class="uk-button uk-button-primary uk-button-small" href="#contact" uk-toggle>Contact Me</a>
+                </div>
             </div>
         </div>
+        <!-- This is the modal -->
+        <div id="contact" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <h2 class="uk-modal-title">Contact Me</h2>
+                <p>
+                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScwb1sn_v2agmqi3OBrphQMSR_09t8k9Xk9ZqMwZesvRfsFgA/formResponse" target="hidden_iframe" onsubmit="submitted=true;" autocomplete="off">
+                        <fieldset class="uk-fieldset">
+
+                            <div class="uk-margin">
+                                <input class="uk-input" type="text" placeholder="Your Name" name="entry.1160509872" id="entry.1160509872" required>
+                            </div>
+
+                            <div class="uk-margin">
+                                <input class="uk-input" type="email" placeholder="Your Email" name="entry.900435346" id="entry.900435346" required>
+                            </div>
+
+                            <div class="uk-margin">
+                                <input class="uk-input" type="text" placeholder="Your Subject" name="entry.1695446912" id="entry.1695446912" required>
+                            </div>
+
+                            <div class="uk-margin">
+                                <textarea class="uk-textarea" rows="5" placeholder="Your Message" name="entry.1234277717" id="entry.1234277717" required></textarea>
+                            </div>
+                        </fieldset>
+                        <button class="uk-button uk-button-primary" type="submit">Send</button>
+                    </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                </p>
+            </div>
+        </div>
+
+        <!-- UIkit JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">var submitted=false;</script>
+        <script type="text/javascript">
+            $('#gform').on('submit', function(e) {
+                $('#gform *').fadeOut(1000);
+                $('#gform').prepend('Your submission has been processed...');
+                setTimeout(function() {
+                    UIkit.modal('#contact').hide();
+                }, 2000);
+            });
+        </script>
     </body>
 </html>
