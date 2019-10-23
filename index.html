@@ -1,118 +1,38 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>GibranDev</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 36px;
-                padding: 20px;
-                color: #0f7ae5;
-                font-weight: 600;
-            }
-            .link a {
-                text-transform: initial;
-                font-weight: 600;
-            }
-            .link a:hover{
-                text-decoration: none;
-            }
-        </style>
+        <!-- Title, Description-->
+        <title>Gibran Dimasagung</title>
+        <meta name="description" content="Hello, My name is Gibran Dimasagung as Full Stack Developer">
+        <meta name="author" content="Gibran Dimasagung">
+        <!-- CSS, fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title">
-                    GibranDev
-                </div>
-                <div class="link">
-                    <a class="uk-button uk-button-primary uk-button-small" href="#contact" uk-toggle>Contact Me</a>
-                </div>
-            </div>
-        </div>
-        <!-- This is the modal -->
-        <div id="contact" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <h2 class="uk-modal-title">Contact Me</h2>
-                <p>
-                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScwb1sn_v2agmqi3OBrphQMSR_09t8k9Xk9ZqMwZesvRfsFgA/formResponse" target="hidden_iframe" onsubmit="submitted=true;" autocomplete="off">
-                        <fieldset class="uk-fieldset">
-
-                            <div class="uk-margin">
-                                <input class="uk-input" type="text" placeholder="Your Name" name="entry.1160509872" id="entry.1160509872" required>
-                            </div>
-
-                            <div class="uk-margin">
-                                <input class="uk-input" type="email" placeholder="Your Email" name="entry.900435346" id="entry.900435346" required>
-                            </div>
-
-                            <div class="uk-margin">
-                                <input class="uk-input" type="text" placeholder="Your Subject" name="entry.1695446912" id="entry.1695446912" required>
-                            </div>
-
-                            <div class="uk-margin">
-                                <textarea class="uk-textarea" rows="5" placeholder="Your Message" name="entry.1234277717" id="entry.1234277717" required></textarea>
-                            </div>
-                        </fieldset>
-                        <button class="uk-button uk-button-primary" type="submit">Send</button>
-                    </form>
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-                </p>
-            </div>
-        </div>
-
-        <!-- UIkit JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript">var submitted=false;</script>
-        <script type="text/javascript">
-            $('#gform').on('submit', function(e) {
-                $('#gform *').fadeOut(1000);
-                $('#gform').prepend('Your submission has been processed...');
-                setTimeout(function() {
-                    UIkit.modal('#contact').hide();
-                }, 2000);
-            });
-        </script>
+        <div class="minimal-container">
+            <div class="profile">
+                <div class="aboutme">
+                    <!-- Intro Lines -->
+                    <p>Hello, My name is</p><br>
+                    <!-- Name -->
+                    <h1>Gibran Dimasagung</h1>
+                    <!-- Profile -->
+                    <h3>Full Stack Developer</h3>
+                    <div class="btn-group">
+                        <!-- hire me add email here -->
+                        <a href="mailto:gibrandev@gmail.com" class="button-color-2">Available for Hire</a>
+                    </div>
+                    <div class="social-media">
+                        <li><a href="https://twitter.com/gibran_dev" target="_blank"><i class="fab fa-twitter twitter" target="_blank"></i></a></li> &nbsp;
+                        <li><a href="https://www.linkedin.com/in/gibran-dimasagung/" target="_blank"><i class="fab fa-linkedin behance"></i></a></li>
+                    </div>
+                </div><!-- end aboutme -->
+            </div><!-- end profile -->
+        </div><!-- end minimal-container -->
     </body>
 </html>
