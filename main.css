@@ -19,12 +19,14 @@ a {
 .profile {
     padding: 50px 130px 50px 130px;
     width: 75vw;
-    background: rgb(255,255,255);
-    background: linear-gradient(317deg, rgba(255, 255, 255, 1) 60%, rgba(207, 255, 255, 1) 150%);
+    background: #fff;
 }
 .profile .user .name {
     font-size: 30px;
     margin-bottom: 0;
+}
+.profile .user .avatar {
+    border-radius: 50%;
 }
 .profile .user .title {
     color: rgba(51, 51, 51, 0.6);
