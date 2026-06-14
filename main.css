@@ -1,330 +1,360 @@
 /* === TOKENS === */
 :root {
-    --c-bg: #ffffff;
-    --c-sidebar: #131313;
-    --c-accent: #059669;
-    --c-text: #1f2937;
-    --c-text-muted: #9ca3af;
-    --c-border: #e5e7eb;
-    --c-sidebar-text: rgba(255, 255, 255, 0.88);
-    --c-sidebar-muted: rgba(255, 255, 255, 0.44);
-    --c-sidebar-border: rgba(255, 255, 255, 0.1);
-    --font: "DM Sans", system-ui, sans-serif;
+    --hdr:            #0f172a;
+    --accent:         #1d4ed8;
+    --accent-light:   #eff6ff;
+    --accent-border:  #bfdbfe;
+    --sidebar-bg:     #f1f5f9;
+    --bg:             #ffffff;
+    --text:           #1e293b;
+    --text-muted:     #94a3b8;
+    --text-subtle:    #64748b;
+    --border:         #e2e8f0;
+    --font:           "DM Sans", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
 /* === RESET === */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
     margin: 0;
     font-family: var(--font);
-    color: var(--c-text);
-    background: var(--c-bg);
+    background: var(--bg);
+    color: var(--text);
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    font-weight: 600;
-}
+h1, h2, h3, h4 { margin: 0; font-weight: 600; }
+p  { margin: 0; line-height: 1.65; }
+ul { margin: 0; padding-left: 1.1rem; }
+li { margin-bottom: 0; line-height: 1.6; }
+a  { color: inherit; text-decoration: none; }
 
-p {
-    margin: 0 0 0.55rem;
-    line-height: 1.65;
-}
-
-p:last-child {
-    margin-bottom: 0;
-}
-
-ul {
-    margin: 0.4rem 0 0.55rem;
-    padding-left: 1.1rem;
-}
-
-li {
-    margin-bottom: 0.2rem;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* === LAYOUT === */
-.layout {
-    display: grid;
-    grid-template-columns: 1fr 300px;
+/* === RESUME WRAPPER === */
+.resume {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-/* === MAIN === */
-.main {
-    background: var(--c-bg);
-    padding: 52px 80px;
-}
-
-/* === HEADER === */
-.header {
+/* ===========================
+   HEADER
+   =========================== */
+.r-header {
+    background: var(--hdr);
+    padding: 26px 48px;
     display: flex;
     align-items: center;
-    gap: 22px;
-    margin-bottom: 48px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
 }
 
-.avatar {
-    width: 72px;
-    height: 72px;
+.r-header-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.r-avatar {
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    border: 2px solid var(--c-border);
+    border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
-.name {
-    font-size: 30px;
+.r-name {
+    font-size: 25px;
     font-weight: 700;
+    color: #ffffff;
     letter-spacing: -0.02em;
-    color: #111;
     line-height: 1.1;
 }
 
-.role {
-    font-size: 14px;
-    color: var(--c-text-muted);
+.r-role {
+    font-size: 13px;
+    color: #94a3b8;
     font-weight: 400;
-    margin: 5px 0 0;
+    margin-top: 4px;
 }
 
-/* === SECTION === */
-.section {
-    border-top: 1px solid var(--c-border);
-    padding-top: 32px;
-    margin-bottom: 40px;
+.r-header-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
-.section:last-child {
-    margin-bottom: 0;
+.r-nav-link {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 400;
+    transition: color 0.15s ease;
 }
 
-.section-title {
+.r-nav-link:hover { color: #fff; }
+
+.r-nav-sep {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 14px;
+}
+
+/* ===========================
+   BODY GRID
+   =========================== */
+.r-body {
+    display: grid;
+    grid-template-columns: 1fr 268px;
+    flex: 1;
+}
+
+/* ===========================
+   MAIN COLUMN
+   =========================== */
+.r-main {
+    background: var(--bg);
+    padding: 38px 52px;
+}
+
+.r-section {
+    margin-bottom: 32px;
+}
+
+.r-section:last-child { margin-bottom: 0; }
+
+.r-section-title {
     font-size: 10.5px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--c-accent);
+    color: var(--accent);
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+/* --- Job entry --- */
+.r-job {
     margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
 }
 
-/* === JOB === */
-.job {
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--c-border);
-}
-
-.job:last-child {
+.r-job:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
 }
 
-.job-header {
+.r-job-meta {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     flex-wrap: wrap;
 }
 
-.job-role {
-    font-size: 14.5px;
+.r-job-role {
+    font-size: 14px;
     font-weight: 600;
-    color: #111;
-    line-height: 1.3;
+    color: #0f172a;
+    line-height: 1.25;
 }
 
-.job-company {
+.r-job-company {
     display: block;
-    font-size: 13px;
-    color: var(--c-text-muted);
-    margin-top: 2px;
+    font-size: 12.5px;
+    color: var(--text-subtle);
     font-weight: 400;
+    margin-top: 2px;
 }
 
-.job-date {
-    font-size: 12px;
-    color: var(--c-text-muted);
+.r-job-date {
+    font-size: 11.5px;
+    color: var(--text-muted);
     white-space: nowrap;
     flex-shrink: 0;
     padding-top: 2px;
 }
 
-.job-desc {
-    font-size: 13px;
+.r-job-desc {
+    font-size: 12.5px;
     line-height: 1.65;
-    color: var(--c-text);
+    color: var(--text);
 }
 
-.job-desc ul {
+.r-job-desc p { margin-bottom: 0.35rem; }
+.r-job-desc p:last-child { margin-bottom: 0; }
+
+.r-job-desc ul {
     padding-left: 1.1rem;
-    margin: 0.45rem 0 0.5rem;
+    margin: 0.4rem 0 0.45rem;
 }
 
-.job-desc li {
-    margin-bottom: 0.2rem;
-}
+.r-job-desc li { margin-bottom: 0.18rem; }
 
-.job-desc p {
-    margin: 0 0 0.35rem;
-}
-
-.job-desc strong {
-    color: #111;
+.r-job-desc strong {
+    color: #0f172a;
     font-weight: 600;
 }
 
-/* === SIDEBAR === */
-.sidebar {
-    background: var(--c-sidebar);
-    color: var(--c-sidebar-text);
-    padding: 52px 32px;
+/* ===========================
+   SIDEBAR
+   =========================== */
+.r-sidebar {
+    background: var(--sidebar-bg);
+    border-left: 1px solid var(--border);
+    padding: 38px 26px;
 }
 
-.sidebar-section {
-    margin-bottom: 36px;
+.r-sb-section {
+    margin-bottom: 28px;
 }
 
-.sidebar-section:last-child {
-    margin-bottom: 0;
-}
+.r-sb-section:last-child { margin-bottom: 0; }
 
-.sidebar-title {
+.r-sb-title {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--c-sidebar-muted);
+    color: #334155;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
     margin-bottom: 12px;
 }
 
-.sidebar-text {
-    font-size: 13px;
+.r-sb-text {
+    font-size: 12.5px;
     line-height: 1.7;
-    color: var(--c-sidebar-text);
-    margin: 0;
+    color: var(--text);
 }
 
-/* === SKILL PILLS === */
-.skills {
+/* --- Skill pills --- */
+.r-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 5px;
 }
 
-.skill {
+.r-skill {
     font-size: 11px;
     font-weight: 500;
-    padding: 4px 9px;
-    border: 1px solid var(--c-sidebar-border);
-    border-radius: 4px;
-    color: var(--c-sidebar-text);
+    padding: 3.5px 9px;
+    background: var(--accent-light);
+    border: 1px solid var(--accent-border);
+    border-radius: 20px;
+    color: var(--accent);
     letter-spacing: 0.01em;
     line-height: 1;
 }
 
-/* === STRENGTHS === */
-.strength-list {
+/* --- Strengths --- */
+.r-strength-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.strength-list li {
-    font-size: 13px;
-    color: var(--c-sidebar-text);
-    padding: 5px 0;
-    border-bottom: 1px solid var(--c-sidebar-border);
-    margin-bottom: 0;
+.r-strength-list li {
+    font-size: 12.5px;
+    color: var(--text);
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
     line-height: 1.4;
 }
 
-.strength-list li:last-child {
-    border-bottom: none;
+.r-strength-list li:last-child { border-bottom: none; }
+
+/* --- Education --- */
+.r-edu-school {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 2px;
 }
 
-/* === CONTACT === */
-.contact-list {
+.r-edu-degree {
+    font-size: 12px;
+    color: var(--text-subtle);
+    margin-bottom: 2px;
+}
+
+.r-edu-date {
+    font-size: 11.5px;
+    color: var(--text-muted);
+}
+
+/* --- Contact --- */
+.r-contact-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.contact-list li {
-    margin-bottom: 8px;
-    line-height: 1.4;
+.r-contact-list li {
+    margin-bottom: 6px;
 }
 
-.contact-list li:last-child {
-    margin-bottom: 0;
-}
+.r-contact-list li:last-child { margin-bottom: 0; }
 
-.contact-list a {
-    font-size: 13px;
-    color: var(--c-accent);
+.r-contact-list a {
+    font-size: 12.5px;
+    color: var(--accent);
     font-weight: 500;
     transition: opacity 0.15s ease;
 }
 
-.contact-list a:hover {
-    opacity: 0.7;
+.r-contact-list a:hover { opacity: 0.7; }
+
+/* ===========================
+   RESPONSIVE - medium
+   =========================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .r-header { padding: 22px 36px; }
+    .r-main   { padding: 32px 40px; }
+    .r-sidebar { padding: 32px 22px; }
 }
 
-/* === RESPONSIVE: medium screens === */
-@media (max-width: 1100px) and (min-width: 769px) {
-    .main {
-        padding: 44px 52px;
-    }
-}
-
-/* === RESPONSIVE: mobile === */
+/* ===========================
+   RESPONSIVE - mobile
+   =========================== */
 @media (max-width: 768px) {
-    .layout {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
-
-    .main {
-        padding: 32px 24px;
-    }
-
-    .sidebar {
-        padding: 40px 24px;
-    }
-
-    .header {
-        margin-bottom: 32px;
-    }
-
-    .name {
-        font-size: 24px;
-    }
-
-    .job-header {
+    .r-header {
         flex-direction: column;
-        gap: 4px;
+        align-items: flex-start;
+        padding: 22px 20px;
+        gap: 14px;
     }
 
-    .job-date {
-        white-space: normal;
+    .r-body {
+        grid-template-columns: 1fr;
     }
+
+    .r-main {
+        padding: 28px 20px;
+    }
+
+    .r-sidebar {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding: 28px 20px;
+    }
+
+    .r-job-meta {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .r-job-date { white-space: normal; }
 }
 
-/* === PRINT === */
+/* ===========================
+   PRINT
+   =========================== */
 @media print {
     @page {
         size: A4;
@@ -337,123 +367,95 @@ a {
         color-adjust: exact;
     }
 
-    .layout {
-        display: grid;
-        grid-template-columns: 1fr 216px;
+    .resume {
         min-height: 100vh;
     }
 
-    .main {
-        padding: 32px 44px;
+    /* Header */
+    .r-header {
+        background: var(--hdr) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        padding: 18px 36px;
     }
 
-    .header {
-        margin-bottom: 26px;
+    .r-avatar { width: 50px; height: 50px; }
+    .r-name   { font-size: 19px; }
+    .r-role   { font-size: 11px; margin-top: 3px; }
+
+    .r-nav-link { font-size: 11px; }
+
+    /* Body grid */
+    .r-body {
+        grid-template-columns: 1fr 212px;
     }
 
-    .avatar {
-        width: 54px;
-        height: 54px;
-    }
+    /* Main */
+    .r-main { padding: 26px 36px; }
 
-    .name {
-        font-size: 22px;
-    }
+    .r-section { margin-bottom: 20px; }
 
-    .role {
-        font-size: 12px;
-    }
-
-    .section {
-        padding-top: 18px;
-        margin-bottom: 20px;
-    }
-
-    .section-title {
+    .r-section-title {
         font-size: 9px;
-        margin-bottom: 14px;
+        padding-bottom: 7px;
+        margin-bottom: 13px;
     }
 
-    .job {
-        margin-bottom: 16px;
-        padding-bottom: 16px;
+    .r-job {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
         break-inside: avoid;
     }
 
-    .job-header {
-        margin-bottom: 7px;
+    .r-job-meta { margin-bottom: 6px; }
+
+    .r-job-role    { font-size: 11.5px; }
+    .r-job-company { font-size: 10.5px; }
+    .r-job-date    { font-size: 10px; }
+
+    .r-job-desc {
+        font-size: 10px;
+        line-height: 1.52;
     }
 
-    .job-role {
-        font-size: 12.5px;
-    }
+    .r-job-desc p   { margin-bottom: 0.28rem; }
+    .r-job-desc ul  { margin: 0.28rem 0; }
+    .r-job-desc li  { margin-bottom: 0.1rem; }
 
-    .job-company {
-        font-size: 11.5px;
-    }
-
-    .job-date {
-        font-size: 10.5px;
-    }
-
-    .job-desc {
-        font-size: 11px;
-        line-height: 1.55;
-    }
-
-    .job-desc ul {
-        margin: 0.3rem 0 0.3rem;
-    }
-
-    .job-desc li {
-        margin-bottom: 0.15rem;
-    }
-
-    .job-desc p {
-        margin: 0 0 0.25rem;
-    }
-
-    .sidebar {
-        background: var(--c-sidebar) !important;
+    /* Sidebar */
+    .r-sidebar {
+        background: var(--sidebar-bg) !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        color-adjust: exact !important;
-        padding: 32px 20px;
+        padding: 26px 18px;
     }
 
-    .sidebar-section {
-        margin-bottom: 22px;
+    .r-sb-section { margin-bottom: 18px; }
+
+    .r-sb-title {
+        font-size: 8.5px;
+        padding-bottom: 6px;
+        margin-bottom: 9px;
     }
 
-    .sidebar-title {
+    .r-sb-text { font-size: 10px; line-height: 1.58; }
+
+    .r-skills { gap: 4px; }
+
+    .r-skill {
         font-size: 9px;
-        margin-bottom: 8px;
+        padding: 2.5px 6px;
     }
 
-    .sidebar-text {
-        font-size: 11px;
-        line-height: 1.6;
+    .r-strength-list li {
+        font-size: 10px;
+        padding: 3px 0;
     }
 
-    .skills {
-        gap: 4px;
-    }
+    .r-edu-school  { font-size: 10.5px; }
+    .r-edu-degree  { font-size: 10px; }
+    .r-edu-date    { font-size: 9.5px; }
 
-    .skill {
-        font-size: 9.5px;
-        padding: 3px 7px;
-    }
-
-    .strength-list li {
-        font-size: 11px;
-        padding: 4px 0;
-    }
-
-    .contact-list a {
-        font-size: 11px;
-    }
-
-    .contact-list li {
-        margin-bottom: 6px;
-    }
+    .r-contact-list a  { font-size: 10px; }
+    .r-contact-list li { margin-bottom: 4px; }
 }
