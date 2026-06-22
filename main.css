@@ -106,7 +106,7 @@ a  { color: inherit; text-decoration: none; }
    =========================== */
 .r-body {
     display: grid;
-    grid-template-columns: 1fr 268px;
+    grid-template-columns: 268px 1fr;
     flex: 1;
 }
 
@@ -206,7 +206,7 @@ a  { color: inherit; text-decoration: none; }
    =========================== */
 .r-sidebar {
     background: var(--sidebar-bg);
-    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     padding: 38px 26px;
 }
 
@@ -387,7 +387,7 @@ a  { color: inherit; text-decoration: none; }
 
     /* Body grid */
     .r-body {
-        grid-template-columns: 1fr 212px;
+        grid-template-columns: 212px 1fr;
     }
 
     /* Main */
