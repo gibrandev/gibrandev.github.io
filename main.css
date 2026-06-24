@@ -238,6 +238,7 @@ a  { color: inherit; text-decoration: none; }
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    font-size: 12.5px;
 }
 
 .r-skill {
@@ -313,7 +314,7 @@ a  { color: inherit; text-decoration: none; }
 /* ===========================
    RESPONSIVE - medium
    =========================== */
-@media (max-width: 1024px) and (min-width: 769px) {
+@media screen and (max-width: 1024px) and (min-width: 769px) {
     .r-header { padding: 22px 36px; }
     .r-main   { padding: 32px 40px; }
     .r-sidebar { padding: 32px 22px; }
@@ -322,7 +323,7 @@ a  { color: inherit; text-decoration: none; }
 /* ===========================
    RESPONSIVE - mobile
    =========================== */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .r-header {
         flex-direction: column;
         align-items: flex-start;
@@ -359,6 +360,7 @@ a  { color: inherit; text-decoration: none; }
     @page {
         size: A4;
         margin: 0;
+        padding: 25px;
     }
 
     html, body {
@@ -385,15 +387,37 @@ a  { color: inherit; text-decoration: none; }
 
     .r-nav-link { font-size: 11px; }
 
-    /* Body grid */
+    /* Body layout - flexbox is more reliable than grid in print */
     .r-body {
-        grid-template-columns: 212px 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch;
+    }
+
+    .r-sidebar {
+        width: 100%;
+        flex-shrink: 0;
+        background: #fff !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-top: 20px;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .r-main {
+        width: 100%;
+        flex-shrink: 0;
+        padding: 0;
+        margin-top: 20px;
     }
 
     /* Main */
-    .r-main { padding: 26px 36px; }
 
     .r-section { margin-bottom: 20px; }
+
+    .r-sb-title { color: var(--accent); }
 
     .r-section-title {
         font-size: 9px;
@@ -414,21 +438,13 @@ a  { color: inherit; text-decoration: none; }
     .r-job-date    { font-size: 10px; }
 
     .r-job-desc {
-        font-size: 10px;
+        font-size: 11px;
         line-height: 1.52;
     }
 
     .r-job-desc p   { margin-bottom: 0.28rem; }
     .r-job-desc ul  { margin: 0.28rem 0; }
     .r-job-desc li  { margin-bottom: 0.1rem; }
-
-    /* Sidebar */
-    .r-sidebar {
-        background: var(--sidebar-bg) !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        padding: 26px 18px;
-    }
 
     .r-sb-section { margin-bottom: 18px; }
 
@@ -438,24 +454,24 @@ a  { color: inherit; text-decoration: none; }
         margin-bottom: 9px;
     }
 
-    .r-sb-text { font-size: 10px; line-height: 1.58; }
+    .r-sb-text { font-size: 11px; line-height: 1.58; }
 
-    .r-skills { gap: 4px; }
+    .r-skills { display:block; gap: 4px; font-size: 11px; }
 
     .r-skill {
-        font-size: 9px;
+        font-size: 11px;
         padding: 2.5px 6px;
     }
 
     .r-strength-list li {
-        font-size: 10px;
+        font-size: 11px;
         padding: 3px 0;
     }
 
-    .r-edu-school  { font-size: 10.5px; }
-    .r-edu-degree  { font-size: 10px; }
-    .r-edu-date    { font-size: 9.5px; }
+    .r-edu-school  { font-size: 11px; }
+    .r-edu-degree  { font-size: 11px; }
+    .r-edu-date    { font-size: 10.5px; }
 
-    .r-contact-list a  { font-size: 10px; }
+    .r-contact-list a  { font-size: 11px; }
     .r-contact-list li { margin-bottom: 4px; }
 }
