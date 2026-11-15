@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gibran Dimasagung - Full Stack Developer</title>
+    <title>Gibran Dimasagung · Senior Full Stack Developer</title>
+    <meta name="description" content="Senior full stack developer with 9+ years building internal business systems for media, automotive and film companies. TypeScript, React, Node.js/Bun, Laravel, PostgreSQL.">
+    <link rel="canonical" href="https://gibrandev.github.io/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://gibrandev.github.io/">
+    <meta property="og:title" content="Gibran Dimasagung · Senior Full Stack Developer">
+    <meta property="og:description" content="9+ years building internal business systems for media, automotive and film companies.">
+    <meta property="og:image" content="https://gibrandev.github.io/gibran-dimasagung.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232d5b88'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23fff' text-anchor='middle'%3EGD%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 
     <!-- Google tag (gtag.js) -->
@@ -19,178 +31,203 @@
     </script>
 </head>
 <body>
-    <div class="resume">
+    <div class="toolbar">
+        <button class="btn-print" type="button" onclick="window.print()">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Save as PDF
+        </button>
+    </div>
 
-        <header class="r-header">
-            <div class="r-header-left">
-                <img class="r-avatar" width="64" height="64" src="1657944084297.jpeg" alt="Gibran Dimasagung">
-                <div class="r-identity">
-                    <h1 class="r-name">Gibran Dimasagung</h1>
-                    <p class="r-role">Senior Full Stack Developer</p>
-                </div>
+    <main class="sheet">
+
+        <header class="cv-header">
+            <img class="avatar" src="gibran-dimasagung.jpg" width="84" height="84" alt="Portrait of Gibran Dimasagung">
+            <div class="identity">
+                <h1 class="name">Gibran Dimasagung</h1>
+                <p class="role">Senior Full Stack Developer</p>
             </div>
-            <nav class="r-header-nav">
-                <a class="r-nav-link" href="https://www.linkedin.com/in/gibran-dimasagung/">LinkedIn</a>
-                <span class="r-nav-sep" aria-hidden="true">·</span>
-                <a class="r-nav-link" href="https://github.com/gibrandev">GitHub</a>
-            </nav>
+            <ul class="contact">
+                <li>Jakarta, Indonesia</li>
+                <li><a href="https://www.linkedin.com/in/gibran-dimasagung/">linkedin.com/in/gibran-dimasagung</a></li>
+                <li><a href="https://github.com/gibrandev">github.com/gibrandev</a></li>
+                <li><a href="https://gibrandev.github.io/">gibrandev.github.io</a></li>
+            </ul>
         </header>
 
-        <div class="r-body">
+        <section class="block" aria-labelledby="h-profile">
+            <h2 id="h-profile" class="block-title">Profile</h2>
+            <p class="summary">Senior full stack developer with 9+ years of experience building internal business systems for media, automotive and film companies. Currently the sole or lead developer behind Visinema Group's suite of ten connected internal applications: single sign-on, HR, finance approvals, film budgeting, box-office monitoring, recruitment, team chat and an AI gateway. Works mainly in TypeScript, React, Node.js/Bun, Laravel and PostgreSQL, with hands-on experience in SSO and OAuth, approval workflows, mobile and desktop apps, and LLM integration (MCP, RAG).</p>
+        </section>
 
-            <aside class="r-sidebar">
+        <section class="block" aria-labelledby="h-skills">
+            <h2 id="h-skills" class="block-title">Skills</h2>
+            <dl class="skills">
+                <div><dt>Languages</dt><dd>TypeScript, JavaScript, PHP, SQL, Python</dd></div>
+                <div><dt>Backend</dt><dd>Node.js, Bun, Express, Elysia, Laravel, REST APIs, WebSocket and SSE</dd></div>
+                <div><dt>Frontend</dt><dd>React, React Router (SSR), Next.js, Tailwind CSS, shadcn/ui, TanStack Query</dd></div>
+                <div><dt>Mobile &amp; desktop</dt><dd>React Native, Electron</dd></div>
+                <div><dt>Data</dt><dd>PostgreSQL, MySQL, Prisma, Drizzle, Redis, BullMQ, pgvector, Qdrant</dd></div>
+                <div><dt>AI</dt><dd>MCP servers, RAG pipelines, LLM tool calling, Ollama, LM Studio, Gemma, DeepSeek</dd></div>
+                <div><dt>Auth &amp; APIs</dt><dd>SSO and OAuth 2.1, JWT, role-based access control, Google Workspace APIs, LiveKit</dd></div>
+                <div><dt>Operations</dt><dd>Docker, PM2, Nginx, Caddy, Linux servers, Git, Vitest, Jest</dd></div>
+            </dl>
+        </section>
 
-                <section class="r-sb-section">
-                    <h2 class="r-sb-title">Professional Summary</h2>
-                    <p class="r-sb-text">Full Stack Developer with 9+ years of experience building internal business applications, editorial systems, and workflow automation platforms across media, automotive, and entertainment industries. Strong in Laravel, React/Next.js, Node.js, PostgreSQL, and MySQL, with hands-on experience designing scalable full-stack systems, leading development initiatives, and delivering operational tools for cross-functional teams. Recently focused on internal enterprise platforms and AI-powered knowledge retrieval solutions for film production and business operations.</p>
-                </section>
+        <section class="block" aria-labelledby="h-experience">
+            <h2 id="h-experience" class="block-title">Experience</h2>
 
-                <section class="r-sb-section">
-                    <h2 class="r-sb-title">Core Skills</h2>
-                    <div class="r-skills">
-                        <h3 data-section-id="6pmtqa" data-start="1028" data-end="1039">Backend</h3>
-                        <p data-start="1040" data-end="1083">PHP, Laravel, Node.js, REST API Development</p>
-                        <h3 data-section-id="5hbczs" data-start="1085" data-end="1097">Frontend</h3>
-                        <p data-start="1098" data-end="1126">React, Next.js, React Native</p>
-                        <h3 data-section-id="1xzgk5f" data-start="1128" data-end="1140">Database</h3>
-                        <p data-start="1141" data-end="1158">PostgreSQL, MySQL</p>
-                        <h3 data-section-id="98yuos" data-start="1160" data-end="1187">Infrastructure &amp; DevOps</h3>
-                        <p data-start="1188" data-end="1219">Docker, Linux Server Management</p>
-                        <h3 data-section-id="180ygqm" data-start="1221" data-end="1240">AI / Automation</h3>
-                        <p data-start="1241" data-end="1307">RAG Architecture, Ollama, LM Studio, LLM-based Knowledge Retrieval</p>
-                        <h3 data-section-id="1vpeicw" data-start="1309" data-end="1326">Working Style</h3>
-                        <p data-start="1327" data-end="1406">Problem Solving, Team Leadership, Mentoring, Communication, Attention to Detail</p>
-                    </div>
-                </section>
-
-                <section class="r-sb-section">
-                    <h2 class="r-sb-title">Education</h2>
-                    <p class="r-edu-school">Universitas Indraprasta PGRI</p>
-                    <p class="r-edu-degree">B.Sc. in Information Technology</p>
-                    <p class="r-edu-date">2019 - 2023</p>
-                </section>
-
-                <section class="r-sb-section">
-                    <h2 class="r-sb-title">Contact</h2>
-                    <ul class="r-contact-list">
-                        <li><a href="https://www.linkedin.com/in/gibran-dimasagung/">LinkedIn</a></li>
-                        <li><a href="https://github.com/gibrandev">GitHub</a></li>
+            <article class="entry">
+                <p class="entry-date">Jan 2026 – Present</p>
+                <div class="entry-body">
+                    <h3 class="entry-role">Full Stack Developer</h3>
+                    <p class="entry-org">PT Visinema Pictures (Visinema Group)</p>
+                    <p class="entry-lede">Builds and runs the group's internal platform: ten connected applications for identity, HR, finance, production, distribution and AI, used across Visinema's companies. Sole developer on most products and lead on a two-person team for the rest.</p>
+                    <ul class="entry-points">
+                        <li>Designed <strong>CERITA</strong>, the single sign-on identity provider that every internal app logs in through, together with its employee portal for records, leave, onboarding and exit clearance.</li>
+                        <li>Built workflow systems that replaced spreadsheets, paper forms and legacy tools: <strong>RECAP</strong> (finance, procurement and HR approvals), <strong>BINTANG</strong> (film budgets and cashflow), <strong>KURASI</strong> (story development and gatekeeping), <strong>RAPI</strong> (assets and licenses), <strong>KARYA</strong> (recruitment) and <strong>PULSE</strong> (HR analytics).</li>
+                        <li>Built box-office monitoring in <strong>AMAN</strong>: daily admissions from five cinema chains parsed from emailed reports, with same-day Quick Count estimates tracked against official Real Count figures.</li>
+                        <li>Shipped <strong>CAKAP</strong>, a team chat and calling app for Android, desktop (macOS, Windows, Linux) and web.</li>
+                        <li>Built an AI gateway (<strong>MCP server</strong> with its own OAuth 2.1 server) that gives Claude and in-house chatbots permission-checked access to 17 internal tools, plus RAG search over company documents.</li>
+                        <li>Moved several apps from Next.js to React Router 8 and migrated data out of legacy systems with validated, re-runnable import scripts.</li>
                     </ul>
-                </section>
+                    <p class="entry-stack">TypeScript · React · React Router · Bun · Elysia · Express · Prisma · PostgreSQL · Redis · React Native · Electron</p>
+                </div>
+            </article>
 
-            </aside>
+            <article class="entry">
+                <p class="entry-date">May 2021 – Dec 2025</p>
+                <div class="entry-body">
+                    <h3 class="entry-role">Full Stack Developer</h3>
+                    <p class="entry-org">PT Arkadia Media Nusantara (Suara.com)</p>
+                    <p class="entry-lede">Built internal business applications for HR, sales, creator partnerships and content moderation at a digital news company.</p>
+                    <ul class="entry-points">
+                        <li>Built and maintained the company <strong>HRIS</strong>: employee records, attendance, leave and HR administration.</li>
+                        <li>Developed <strong>Sales Sync</strong> to manage client data, monitor sales performance and keep operational data in sync across divisions.</li>
+                        <li>Built <strong>Nexus Creator Hub</strong>, a platform that connects content creators with collaboration and business opportunities.</li>
+                        <li>Developed <strong>Comment CMS</strong> for moderating user comments across the company's news and media sites.</li>
+                    </ul>
+                </div>
+            </article>
 
-            <main class="r-main">
-                <section class="r-section">
-                    <h2 class="r-section-title">Professional Experience</h2>
+            <article class="entry">
+                <p class="entry-date">Mar 2023 – Jun 2024</p>
+                <div class="entry-body">
+                    <h3 class="entry-role">Front End Developer <span class="entry-tag">Freelance</span></h3>
+                    <p class="entry-org">PT Moladin Digital Indonesia</p>
+                    <ul class="entry-points">
+                        <li>Built and maintained front-end features for the Intools team's internal applications, including the <strong>Pricing Engine</strong> and <strong>CRM Dashboard</strong> used by pricing and customer-relationship teams.</li>
+                    </ul>
+                </div>
+            </article>
 
-                    <article class="r-job">
-                        <div class="r-job-meta">
-                            <div class="r-job-info">
-                                <h3 class="r-job-role">Full Stack Developer</h3>
-                                <span class="r-job-company">PT. Visinema Pictures</span>
-                            </div>
-                            <span class="r-job-date">Jan 2026 - Present</span>
-                        </div>
-                        <div class="r-job-desc">
-                            <p data-start="1524" data-end="1682">Developing internal platforms and AI-powered solutions to support film production operations, budgeting workflows, and knowledge access across business units.</p>
-                            <p data-start="1684" data-end="1706"><strong data-start="1684" data-end="1706">Key contributions:</strong></p>
-                            <ul data-start="1707" data-end="2806">
-                                <li data-section-id="1y2x532" data-start="1707" data-end="1867">Designed and developed <strong data-start="1732" data-end="1742">CERITA</strong>, an internal operations platform to streamline workflows across multiple departments within the film production environment.</li>
-                                <li data-section-id="1iak4dm" data-start="1868" data-end="2022">Built modules for <strong data-start="1888" data-end="1915">Film Release Monitoring</strong>, enabling teams to track movie performance through <strong data-start="1967" data-end="1982">Quick Count</strong> and <strong data-start="1987" data-end="2001">Real Count</strong> reporting workflows.</li>
-                                <li data-section-id="1a8231j" data-start="2023" data-end="2175">Developed a <strong data-start="2037" data-end="2069">Story Development Management</strong> module to support screenplay and content development processes in a more structured and trackable system.</li>
-                                <li data-section-id="9rh2tw" data-start="2176" data-end="2303">Built a <strong data-start="2186" data-end="2208">Gatekeeping System</strong> to support review, approval, and quality-control workflows for internal operational processes.</li>
-                                <li data-section-id="jhhv6" data-start="2304" data-end="2445">Developed an <strong data-start="2319" data-end="2362">Application and Hardware Request Portal</strong> to manage internal requests and asset-related workflows in one centralized system.</li>
-                                <li data-section-id="pcg913" data-start="2446" data-end="2588">Built a <strong data-start="2456" data-end="2486">Film Budgeting Application</strong> to support budget planning, allocation, and cost monitoring throughout the film production lifecycle.</li>
-                                <li data-section-id="nehmuv" data-start="2589" data-end="2806">Implemented an <strong data-start="2606" data-end="2641">AI knowledge retrieval solution</strong> using <strong data-start="2648" data-end="2668">RAG architecture</strong>, <strong data-start="2670" data-end="2680">Ollama</strong>, <strong data-start="2682" data-end="2695">LM Studio</strong>, and <strong data-start="2701" data-end="2710">Gemma</strong> to improve internal information access and support knowledge discovery across operational data.</li>
-                            </ul>
-                        </div>
-                    </article>
+            <article class="entry">
+                <p class="entry-date">Apr 2019 – May 2021</p>
+                <div class="entry-body">
+                    <h3 class="entry-role">Lead Full Stack Developer</h3>
+                    <p class="entry-org">PT Digital Satellite Indonesia</p>
+                    <p class="entry-lede">Led a team of developers and designers building internal systems and custom client applications, while staying hands-on across the stack.</p>
+                    <ul class="entry-points">
+                        <li>Built internal applications for <strong>project management</strong> and <strong>performance tracking</strong>.</li>
+                        <li>Delivered custom applications for external clients, from database design and backend APIs to front end and third-party integrations.</li>
+                        <li>Ran code reviews and set the team's conventions for clean, maintainable code.</li>
+                    </ul>
+                </div>
+            </article>
 
-                    <article class="r-job">
-                        <div class="r-job-meta">
-                            <div class="r-job-info">
-                                <h3 class="r-job-role">Full Stack Developer</h3>
-                                <span class="r-job-company">PT. Arkadia Media Nusantara (Suara.com)</span>
-                            </div>
-                            <span class="r-job-date">May 2021 - Dec 2025</span>
-                        </div>
-                        <div class="r-job-desc">
-                            <p data-start="2911" data-end="3088">Developed and maintained internal business applications supporting HR operations, sales workflows, creator management, and content moderation within a digital media environment.</p>
-                            <p data-start="3090" data-end="3112"><strong data-start="3090" data-end="3112">Key contributions:</strong></p>
-                            <ul data-start="3113" data-end="3801">
-                                <li data-section-id="utlqd7" data-start="3113" data-end="3233">Built and maintained <strong data-start="3136" data-end="3144">HRIS</strong> to support employee data management, attendance, leave, and HR administrative workflows.</li>
-                                <li data-section-id="zahyac" data-start="3234" data-end="3394">Developed <strong data-start="3246" data-end="3260">Sales Sync</strong>, an internal application for managing client data, monitoring sales performance, and synchronizing operational data across divisions.</li>
-                                <li data-section-id="r74ytn" data-start="3395" data-end="3520">Built <strong data-start="3403" data-end="3424">Nexus Creator Hub</strong>, a platform designed to connect content creators with collaboration and business opportunities.</li>
-                                <li data-section-id="1qtqcl4" data-start="3521" data-end="3652">Developed <strong data-start="3533" data-end="3548">Comment CMS</strong>, a moderation and management system for handling user comments across news and digital media platforms.</li>
-                                <li data-section-id="198h5rk" data-start="3653" data-end="3801">Contributed to the development of internal tools used by business and operational teams, helping streamline processes across multiple departments.</li>
-                            </ul>
-                        </div>
-                    </article>
+            <article class="entry">
+                <p class="entry-date">Oct 2017 – Mar 2019</p>
+                <div class="entry-body">
+                    <h3 class="entry-role">Full Stack Developer</h3>
+                    <p class="entry-org">PT Winratama Perkasa</p>
+                    <ul class="entry-points">
+                        <li>Developed and optimized <strong>Winnetnews.com</strong>, keeping a high-traffic news portal fast and stable.</li>
+                        <li>Built and maintained the internal <strong>CMS</strong> for editorial content and publishing, including third-party service integrations.</li>
+                        <li>Managed colocated servers for stability, security and uptime.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
 
-                    <article class="r-job">
-                        <div class="r-job-meta">
-                            <div class="r-job-info">
-                                <h3 class="r-job-role">Front End Developer (Freelance)</h3>
-                                <span class="r-job-company">PT. Moladin Digital Indonesia</span>
-                            </div>
-                            <span class="r-job-date">Mar 2023 - Jun 2024</span>
-                        </div>
-                        <div class="r-job-desc">
-                            <p data-start="3911" data-end="4049">Worked as part of the <strong data-start="3933" data-end="3944">Intools</strong> team, contributing to internal applications used to support pricing and customer relationship workflows.</p>
-                            <p data-start="4051" data-end="4073"><strong data-start="4051" data-end="4073">Key contributions:</strong></p>
-                            <ul data-start="4074" data-end="4427">
-                                <li data-section-id="n0fao0" data-start="4074" data-end="4200">Developed and maintained front-end features for internal business tools, including <strong data-start="4159" data-end="4177">Pricing Engine</strong> and <strong data-start="4182" data-end="4199">CRM Dashboard</strong>.</li>
-                                <li data-section-id="hwjqzs" data-start="4201" data-end="4326">Collaborated with internal teams to deliver interfaces supporting operational efficiency and day-to-day business processes.</li>
-                                <li data-section-id="1q72y90" data-start="4327" data-end="4427">Contributed to ongoing development and enhancement of internal tools used across the organization.</li>
-                            </ul>
-                        </div>
-                    </article>
+        <section class="block" aria-labelledby="h-education">
+            <h2 id="h-education" class="block-title">Education</h2>
+            <article class="entry">
+                <p class="entry-date">2019 – 2023</p>
+                <div class="entry-body">
+                    <h3 class="entry-role">B.Sc. in Information Technology</h3>
+                    <p class="entry-org">Universitas Indraprasta PGRI</p>
+                </div>
+            </article>
+        </section>
 
-                    <article class="r-job">
-                        <div class="r-job-meta">
-                            <div class="r-job-info">
-                                <h3 class="r-job-role">Lead Full Stack Developer</h3>
-                                <span class="r-job-company">PT. Digital Satellite Indonesia</span>
-                            </div>
-                            <span class="r-job-date">Apr 2019 - May 2021</span>
-                        </div>
-                        <div class="r-job-desc">
-                            <p data-start="4702" data-end="4856">Led the development of internal and client-facing applications while contributing hands-on across architecture, backend, frontend, and delivery processes.</p>
-                            <p data-start="4858" data-end="4880"><strong data-start="4858" data-end="4880">Key contributions:</strong></p>
-                            <ul data-start="4881" data-end="5546">
-                                <li data-section-id="1a6kpp" data-start="4881" data-end="4984">Led a team of developers and designers in delivering internal systems and custom client applications.</li>
-                                <li data-section-id="1xpwxrb" data-start="4985" data-end="5100">Directed development activities to ensure code quality, maintainability, and alignment with project requirements.</li>
-                                <li data-section-id="1vzmr22" data-start="5101" data-end="5217">Built internal applications for <strong data-start="5135" data-end="5157">project management</strong> and <strong data-start="5162" data-end="5186">performance tracking</strong> to support company operations.</li>
-                                <li data-section-id="ohlyso" data-start="5218" data-end="5309">Developed external client applications tailored to specific business needs and workflows.</li>
-                                <li data-section-id="19slvni" data-start="5310" data-end="5432">Managed full-stack implementation across database design, backend APIs, frontend delivery, and third-party integrations.</li>
-                                <li data-section-id="9m1gwm" data-start="5433" data-end="5546">Conducted code reviews and contributed to establishing clean, scalable, and maintainable development practices.</li>
-                            </ul>
-                        </div>
-                    </article>
+        <section class="block block-projects" aria-labelledby="h-projects">
+            <div class="block-head">
+                <h2 id="h-projects" class="block-title">Selected projects</h2>
+                <p class="block-note">Visinema Group, 2026. Internal systems that are not publicly accessible, so descriptions leave out confidential details. Walkthroughs available on request.</p>
+            </div>
 
-                    <article class="r-job">
-                        <div class="r-job-meta">
-                            <div class="r-job-info">
-                                <h3 class="r-job-role">Full Stack Developer</h3>
-                                <span class="r-job-company">PT. Winratama Perkasa</span>
-                            </div>
-                            <span class="r-job-date">Oct 2017 - Mar 2019</span>
-                        </div>
-                        <div class="r-job-desc">
-                            <p data-start="5637" data-end="5772">Handled development and maintenance of digital platforms, editorial systems, and supporting infrastructure for online media operations.</p>
-                            <p data-start="5774" data-end="5796"><strong data-start="5774" data-end="5796">Key contributions:</strong></p>
-                            <ul data-start="5797" data-end="6218">
-                                <li data-section-id="wt3ute" data-start="5797" data-end="5917">Developed and optimized <strong data-start="5823" data-end="5841">Winnetnews.com</strong>, helping maintain performance and stability for a high-traffic news portal.</li>
-                                <li data-section-id="v42uo1" data-start="5918" data-end="6025">Built and maintained the internal <strong data-start="5954" data-end="5961">CMS</strong> used for editorial content management and publishing workflows.</li>
-                                <li data-section-id="h1tcty" data-start="6026" data-end="6119">Integrated third-party services and supporting tools into the CMS and publishing ecosystem.</li>
-                                <li data-section-id="k4nx0a" data-start="6120" data-end="6218">Managed collocated servers to support platform stability, security, and operational reliability.</li>
-                            </ul>
-                        </div>
-                    </article>
-                </section>
-            </main>
-        </div>
-    </div>
+            <div class="projects">
+                <article class="project">
+                    <h3 class="project-name">CERITA <span>Single sign-on and HR portal</span></h3>
+                    <p class="project-desc">Identity provider for every internal app (authorization-code flow, revocable sessions, scoped API keys) and the employee portal for records, leave with holiday sync, a 90-day onboarding programme and exit clearance. Includes an AI assistant that answers within the user's own permissions.</p>
+                    <p class="project-meta"><b>Sole developer</b> · React Router 8, Express, Prisma, PostgreSQL</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">RECAP <span>Request and approval platform</span></h3>
+                    <p class="project-desc">Back-office app for four group companies. One configurable approval engine covers petty cash, reimbursements, cash advances and vendor payments, alongside purchase requisitions, purchase orders, IT and HR requests. Syncs bills and master data with Odoo 17.</p>
+                    <p class="project-meta"><b>Lead developer, team of two</b> · led the v2 rewrite, built finance and HR modules · Bun, Express, Prisma</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">KURASI <span>Story development and gatekeeping</span></h3>
+                    <p class="project-desc">Takes a story from first idea to release plan: a story bank, three-stage gatekeeping reviews with live reviewer notes, and approval minutes signed with HMAC and verifiable by QR code. Replaced the weekly slate workbook through a validated migration.</p>
+                    <p class="project-meta"><b>Sole developer</b> · Bun, Elysia, Prisma, Redis, BullMQ</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">AMAN <span>Box-office monitoring</span></h3>
+                    <p class="project-desc">Collects daily admissions from five cinema chains by parsing emailed PDF and Excel reports, tracks same-day Quick Count estimates against official Real Count figures, and turns both into reports for distribution, marketing and management.</p>
+                    <p class="project-meta"><b>Core developer, team of two</b> · Bun, Elysia, IMAP, Redis, Chart.js</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">BINTANG <span>Film production budgeting</span></h3>
+                    <p class="project-desc">Moves production budgets out of spreadsheets: a line-item budget grid with tax gross-up, cashflow plans split into instalments that always reconcile, and separate approval tracks for budget and cashflow up to "Ready for Production".</p>
+                    <p class="project-meta"><b>Sole developer</b> · React Router, Express, Prisma, SheetJS</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">RAPI <span>Asset and license management</span></h3>
+                    <p class="project-desc">Tracks IT, general-affairs and production equipment for three companies: configurable approvals, handover documents signed by email link, QR labels, encrypted license keys and on-demand depreciation. Replaced a legacy system through an all-or-nothing import with dry run.</p>
+                    <p class="project-meta"><b>Sole developer</b> · 81 automated tests · Express 5, Prisma, Vitest</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">KARYA <span>Careers site and applicant tracking</span></h3>
+                    <p class="project-desc">Public job board plus a recruiter console: pipeline stages, CV search with OCR and full-text indexing, match scoring, interview invites with calendar and Meet links, and automatic day-one setup in the HR and request systems.</p>
+                    <p class="project-meta"><b>Sole developer</b> · Bun workspaces, Elysia, Drizzle, PostgreSQL</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">PULSE <span>People analytics for HR</span></h3>
+                    <p class="project-desc">Turns HR partnering sessions and surveys into categorised people signals, trends and heatmaps. AI briefs come with checked citations, and employee names are masked before any model call. Team leaders see aggregated data only.</p>
+                    <p class="project-meta"><b>Sole developer</b> · React Router, Prisma, OpenAI-compatible LLM APIs</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">CAKAP <span>Team chat and calls</span></h3>
+                    <p class="project-desc">Channels, threads, direct messages, voice and video calls with screen sharing, and an offline cache. Ships as an Android app, a desktop app for macOS, Windows and Linux with signed auto-updates, and a web app.</p>
+                    <p class="project-meta"><b>Built the mobile and desktop apps</b>, co-developed the backend · React Native, Electron, Socket.IO, LiveKit</p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-name">MCP <span>AI gateway to company systems</span></h3>
+                    <p class="project-desc">Model Context Protocol server with its own OAuth 2.1 authorization server. Gives Claude and in-house chatbots access to 17 internal tools (leave, meetings, story reviews, film data, document search), checked per user and per tool, plus RAG over uploaded documents.</p>
+                    <p class="project-meta"><b>Sole developer</b> · Bun, Elysia, Prisma, Qdrant, Ollama</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
